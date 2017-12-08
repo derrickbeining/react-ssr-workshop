@@ -1,4 +1,4 @@
-import {FETCH_USERS} from 'actions';
+import {FETCH_USERS} from 'store/actions';
 
 export default (state = [], action) => {
   switch (action.type) {

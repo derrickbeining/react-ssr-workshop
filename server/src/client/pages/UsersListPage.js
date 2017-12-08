@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import {fetchUsers} from 'actions';
+import {fetchUsers} from 'store/actions';
 
 class UsersList extends Component {
   render () {
