@@ -15,10 +15,10 @@ const newServerAxios = req => axios.create({
 export default function constructStore (req) {
   let initialState;
   let customAxios;
-  if (req) {
+  if (req) { // configure for server-side store
     initialState = {};
     customAxios = newServerAxios(req);
-  } else {
+  } else { // configure for client-side store
     initialState = window.INITIAL_STATE;
     customAxios = clientToAPI;
   }

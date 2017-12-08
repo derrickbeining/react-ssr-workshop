@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchAdmins} from 'store/actions';
+import requireAuth from 'client/components/hocs/requireAuth';
 
 class AdminsListPage extends Component {
   render () {
@@ -23,6 +24,8 @@ class AdminsListPage extends Component {
   }
 }
 
-AdminsListPage.loadData = ({dispatch}) => dispatch(fetchAdmins());
+const authEnforced = requireAuth(AdminsListPage);
 const mapState = ({admins}) => ({admins});
-export default connect(mapState, {fetchAdmins})(AdminsListPage);
+const connectedToStore = connect(mapState, {fetchAdmins})(authEnforced);
+connectedToStore.loadData = ({dispatch}) => dispatch(fetchAdmins());
+export default connectedToStore;

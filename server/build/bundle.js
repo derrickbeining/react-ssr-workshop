@@ -60,192 +60,1069 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"react\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdFwiPzNjNjIiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0XCIpO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIGV4dGVybmFsIFwicmVhY3RcIlxuLy8gbW9kdWxlIGlkID0gMFxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///0\n");
+module.exports = require("react");
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.fetchAdmins = exports.FETCH_ADMINS = exports.fetchCurrentUser = exports.FETCH_CURRENT_USER = exports.fetchUsers = exports.FETCH_USERS = undefined;\n\nvar _axios = __webpack_require__(5);\n\nvar _axios2 = _interopRequireDefault(_axios);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nvar FETCH_USERS = exports.FETCH_USERS = 'fetch_users';\n// ------------------------------------------------------- from thunk.withExtraArgument\n// ------------------------------------------------------- in client/index &\n// ------------------------------------------------------- server / createStore\nvar fetchUsers = exports.fetchUsers = function fetchUsers() {\n  return function () {\n    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(dispatch, getState, apiAxios) {\n      var res;\n      return regeneratorRuntime.wrap(function _callee$(_context) {\n        while (1) {\n          switch (_context.prev = _context.next) {\n            case 0:\n              _context.next = 2;\n              return apiAxios.get('http://react-ssr-api.herokuapp.com/users');\n\n            case 2:\n              res = _context.sent;\n              return _context.abrupt('return', dispatch({\n                type: FETCH_USERS,\n                payload: res\n              }));\n\n            case 4:\n            case 'end':\n              return _context.stop();\n          }\n        }\n      }, _callee, undefined);\n    }));\n\n    return function (_x, _x2, _x3) {\n      return _ref.apply(this, arguments);\n    };\n  }();\n};\n\nvar FETCH_CURRENT_USER = exports.FETCH_CURRENT_USER = 'fetch_current_user';\nvar fetchCurrentUser = exports.fetchCurrentUser = function fetchCurrentUser() {\n  return function () {\n    var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(dispatch, getState, apiAxios) {\n      var res;\n      return regeneratorRuntime.wrap(function _callee2$(_context2) {\n        while (1) {\n          switch (_context2.prev = _context2.next) {\n            case 0:\n              _context2.next = 2;\n              return apiAxios.get('/current_user');\n\n            case 2:\n              res = _context2.sent;\n              return _context2.abrupt('return', dispatch({\n                type: FETCH_CURRENT_USER,\n                payload: res\n              }));\n\n            case 4:\n            case 'end':\n              return _context2.stop();\n          }\n        }\n      }, _callee2, undefined);\n    }));\n\n    return function (_x4, _x5, _x6) {\n      return _ref2.apply(this, arguments);\n    };\n  }();\n};\n\nvar FETCH_ADMINS = exports.FETCH_ADMINS = 'fetch_admins';\nvar fetchAdmins = exports.fetchAdmins = function fetchAdmins() {\n  return function () {\n    var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(dispatch, getState, apiAxios) {\n      var res;\n      return regeneratorRuntime.wrap(function _callee3$(_context3) {\n        while (1) {\n          switch (_context3.prev = _context3.next) {\n            case 0:\n              _context3.next = 2;\n              return apiAxios.get('/admins');\n\n            case 2:\n              res = _context3.sent;\n              return _context3.abrupt('return', dispatch({\n                type: FETCH_ADMINS,\n                payload: res\n              }));\n\n            case 4:\n            case 'end':\n              return _context3.stop();\n          }\n        }\n      }, _callee3, undefined);\n    }));\n\n    return function (_x7, _x8, _x9) {\n      return _ref3.apply(this, arguments);\n    };\n  }();\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3RvcmUvYWN0aW9ucy9pbmRleC5qcz8zMzUwIl0sIm5hbWVzIjpbIkZFVENIX1VTRVJTIiwiZmV0Y2hVc2VycyIsImRpc3BhdGNoIiwiZ2V0U3RhdGUiLCJhcGlBeGlvcyIsImdldCIsInJlcyIsInR5cGUiLCJwYXlsb2FkIiwiRkVUQ0hfQ1VSUkVOVF9VU0VSIiwiZmV0Y2hDdXJyZW50VXNlciIsIkZFVENIX0FETUlOUyIsImZldGNoQWRtaW5zIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7Ozs7Ozs7O0FBRU8sSUFBTUEsb0NBQWMsYUFBcEI7QUFDUDtBQUNBO0FBQ0E7QUFDTyxJQUFNQyxrQ0FBYSxTQUFiQSxVQUFhO0FBQUE7QUFBQSx1RUFBTSxpQkFBT0MsUUFBUCxFQUFpQkMsUUFBakIsRUFBMkJDLFFBQTNCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBQ1pBLFNBQVNDLEdBQVQsQ0FBYSwwQ0FBYixDQURZOztBQUFBO0FBQ3hCQyxpQkFEd0I7QUFBQSwrQ0FFdkJKLFNBQVM7QUFDZEssc0JBQU1QLFdBRFE7QUFFZFEseUJBQVNGO0FBRkssZUFBVCxDQUZ1Qjs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxLQUFOOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsQ0FBbkI7O0FBUUEsSUFBTUcsa0RBQXFCLG9CQUEzQjtBQUNBLElBQU1DLDhDQUFtQixTQUFuQkEsZ0JBQW1CO0FBQUE7QUFBQSx3RUFBTSxrQkFBT1IsUUFBUCxFQUFpQkMsUUFBakIsRUFBMkJDLFFBQTNCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBQ2xCQSxTQUFTQyxHQUFULENBQWEsZUFBYixDQURrQjs7QUFBQTtBQUM5QkMsaUJBRDhCO0FBQUEsZ0RBRTdCSixTQUFTO0FBQ2RLLHNCQUFNRSxrQkFEUTtBQUVkRCx5QkFBU0Y7QUFGSyxlQUFULENBRjZCOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEtBQU47O0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxDQUF6Qjs7QUFRQSxJQUFNSyxzQ0FBZSxjQUFyQjtBQUNBLElBQU1DLG9DQUFjLFNBQWRBLFdBQWM7QUFBQTtBQUFBLHdFQUFNLGtCQUFPVixRQUFQLEVBQWlCQyxRQUFqQixFQUEyQkMsUUFBM0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFDYkEsU0FBU0MsR0FBVCxDQUFhLFNBQWIsQ0FEYTs7QUFBQTtBQUN6QkMsaUJBRHlCO0FBQUEsZ0RBRXhCSixTQUFTO0FBQ2RLLHNCQUFNSSxZQURRO0FBRWRILHlCQUFTRjtBQUZLLGVBQVQsQ0FGd0I7O0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsS0FBTjs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLENBQXBCIiwiZmlsZSI6IjEuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgYXhpb3MgZnJvbSAnYXhpb3MnO1xuXG5leHBvcnQgY29uc3QgRkVUQ0hfVVNFUlMgPSAnZmV0Y2hfdXNlcnMnO1xuLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBmcm9tIHRodW5rLndpdGhFeHRyYUFyZ3VtZW50XG4vLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGluIGNsaWVudC9pbmRleCAmXG4vLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIHNlcnZlciAvIGNyZWF0ZVN0b3JlXG5leHBvcnQgY29uc3QgZmV0Y2hVc2VycyA9ICgpID0+IGFzeW5jIChkaXNwYXRjaCwgZ2V0U3RhdGUsIGFwaUF4aW9zKSA9PiB7XG4gIGNvbnN0IHJlcyA9IGF3YWl0IGFwaUF4aW9zLmdldCgnaHR0cDovL3JlYWN0LXNzci1hcGkuaGVyb2t1YXBwLmNvbS91c2VycycpO1xuICByZXR1cm4gZGlzcGF0Y2goe1xuICAgIHR5cGU6IEZFVENIX1VTRVJTLFxuICAgIHBheWxvYWQ6IHJlc1xuICB9KTtcbn1cblxuZXhwb3J0IGNvbnN0IEZFVENIX0NVUlJFTlRfVVNFUiA9ICdmZXRjaF9jdXJyZW50X3VzZXInO1xuZXhwb3J0IGNvbnN0IGZldGNoQ3VycmVudFVzZXIgPSAoKSA9PiBhc3luYyAoZGlzcGF0Y2gsIGdldFN0YXRlLCBhcGlBeGlvcykgPT4ge1xuICBjb25zdCByZXMgPSBhd2FpdCBhcGlBeGlvcy5nZXQoJy9jdXJyZW50X3VzZXInKTtcbiAgcmV0dXJuIGRpc3BhdGNoKHtcbiAgICB0eXBlOiBGRVRDSF9DVVJSRU5UX1VTRVIsXG4gICAgcGF5bG9hZDogcmVzLFxuICB9KVxufVxuXG5leHBvcnQgY29uc3QgRkVUQ0hfQURNSU5TID0gJ2ZldGNoX2FkbWlucyc7XG5leHBvcnQgY29uc3QgZmV0Y2hBZG1pbnMgPSAoKSA9PiBhc3luYyAoZGlzcGF0Y2gsIGdldFN0YXRlLCBhcGlBeGlvcykgPT4ge1xuICBjb25zdCByZXMgPSBhd2FpdCBhcGlBeGlvcy5nZXQoJy9hZG1pbnMnKTtcbiAgcmV0dXJuIGRpc3BhdGNoKHtcbiAgICB0eXBlOiBGRVRDSF9BRE1JTlMsXG4gICAgcGF5bG9hZDogcmVzLFxuICB9KVxufVxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL3N0b3JlL2FjdGlvbnMvaW5kZXguanMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///1\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fetchAdmins = exports.FETCH_ADMINS = exports.fetchCurrentUser = exports.FETCH_CURRENT_USER = exports.fetchUsers = exports.FETCH_USERS = undefined;
+
+var _axios = __webpack_require__(5);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+var FETCH_USERS = exports.FETCH_USERS = 'fetch_users';
+// ------------------------------------------------------- from thunk.withExtraArgument
+// ------------------------------------------------------- in client/index &
+// ------------------------------------------------------- server / createStore
+var fetchUsers = exports.fetchUsers = function fetchUsers() {
+  return function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(dispatch, getState, apiAxios) {
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              return _context.abrupt('return', apiAxios.get('/users').then(function (res) {
+                return dispatch({ type: FETCH_USERS, payload: res });
+              }));
+
+            case 1:
+            case 'end':
+              return _context.stop();
+          }
+        }
+      }, _callee, undefined);
+    }));
+
+    return function (_x, _x2, _x3) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+};
+
+var FETCH_CURRENT_USER = exports.FETCH_CURRENT_USER = 'fetch_current_user';
+var fetchCurrentUser = exports.fetchCurrentUser = function fetchCurrentUser() {
+  return function (dispatch, getState, apiAxios) {
+    return apiAxios.get('/current_user').then(function (res) {
+      return dispatch({ type: FETCH_CURRENT_USER, payload: res });
+    });
+    // .catch(reason => console.warn(reason.response));
+  };
+};
+
+var FETCH_ADMINS = exports.FETCH_ADMINS = 'fetch_admins';
+var fetchAdmins = exports.fetchAdmins = function fetchAdmins() {
+  return function (dispatch, getState, apiAxios) {
+    return apiAxios.get('/admins').then(function (res) {
+      return dispatch({ type: FETCH_ADMINS, payload: res });
+    });
+    // .catch(reason => console.warn(reason.response));
+  };
+};
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"react-redux\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC1yZWR1eFwiP2NhNjQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMi5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0LXJlZHV4XCIpO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIGV4dGVybmFsIFwicmVhY3QtcmVkdXhcIlxuLy8gbW9kdWxlIGlkID0gMlxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///2\n");
+module.exports = require("react-redux");
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"react-router-dom\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC1yb3V0ZXItZG9tXCI/MDk1NiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiIzLmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwicmVhY3Qtcm91dGVyLWRvbVwiKTtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyBleHRlcm5hbCBcInJlYWN0LXJvdXRlci1kb21cIlxuLy8gbW9kdWxlIGlkID0gM1xuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///3\n");
+module.exports = require("react-router-dom");
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"react-router-config\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC1yb3V0ZXItY29uZmlnXCI/ZGE4NiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiI0LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwicmVhY3Qtcm91dGVyLWNvbmZpZ1wiKTtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyBleHRlcm5hbCBcInJlYWN0LXJvdXRlci1jb25maWdcIlxuLy8gbW9kdWxlIGlkID0gNFxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///4\n");
+module.exports = require("react-router-config");
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"axios\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJheGlvc1wiPzI1MzkiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiNS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcImF4aW9zXCIpO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIGV4dGVybmFsIFwiYXhpb3NcIlxuLy8gbW9kdWxlIGlkID0gNVxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///5\n");
+module.exports = require("axios");
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _redux = __webpack_require__(7);\n\nvar _adminsReducer = __webpack_require__(23);\n\nvar _adminsReducer2 = _interopRequireDefault(_adminsReducer);\n\nvar _usersReducer = __webpack_require__(24);\n\nvar _usersReducer2 = _interopRequireDefault(_usersReducer);\n\nvar _authReducer = __webpack_require__(25);\n\nvar _authReducer2 = _interopRequireDefault(_authReducer);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = (0, _redux.combineReducers)({\n  admins: _adminsReducer2.default,\n  auth: _authReducer2.default,\n  users: _usersReducer2.default\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3RvcmUvcmVkdWNlcnMvaW5kZXguanM/MmRhZiJdLCJuYW1lcyI6WyJhZG1pbnMiLCJhdXRoIiwidXNlcnMiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7Ozs7O2tCQUVlLDRCQUFnQjtBQUM3QkEsaUNBRDZCO0FBRTdCQyw2QkFGNkI7QUFHN0JDO0FBSDZCLENBQWhCLEMiLCJmaWxlIjoiNi5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Y29tYmluZVJlZHVjZXJzfSBmcm9tICdyZWR1eCc7XG5pbXBvcnQgYWRtaW5zUmVkdWNlciBmcm9tICcuL2FkbWluc1JlZHVjZXInO1xuaW1wb3J0IHVzZXJzUmVkdWNlciBmcm9tICcuL3VzZXJzUmVkdWNlcic7XG5pbXBvcnQgYXV0aFJlZHVjZXIgZnJvbSAnLi9hdXRoUmVkdWNlcic7XG5cbmV4cG9ydCBkZWZhdWx0IGNvbWJpbmVSZWR1Y2Vycyh7XG4gIGFkbWluczogYWRtaW5zUmVkdWNlcixcbiAgYXV0aDogYXV0aFJlZHVjZXIsXG4gIHVzZXJzOiB1c2Vyc1JlZHVjZXIsXG59KVxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL3N0b3JlL3JlZHVjZXJzL2luZGV4LmpzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///6\n");
+module.exports = require("serialize-javascript");
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"redux\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWR1eFwiPzVjOWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiNy5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlZHV4XCIpO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIGV4dGVybmFsIFwicmVkdXhcIlxuLy8gbW9kdWxlIGlkID0gN1xuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///7\n");
-
-/***/ }),
-/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(9);\n\nvar _express = __webpack_require__(10);\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _expressHttpProxy = __webpack_require__(11);\n\nvar _expressHttpProxy2 = _interopRequireDefault(_expressHttpProxy);\n\nvar _render = __webpack_require__(12);\n\nvar _render2 = _interopRequireDefault(_render);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\n\napp.use('/api', (0, _expressHttpProxy2.default)('http://react-ssr-api.herokuapp.com', {\n  proxyReqOptDecorator: function proxyReqOptDecorator(opts) {\n    opts.headers['x-forwarded-host'] = 'localhost:3000';\n    return opts;\n  }\n}));\n\napp.use(_express2.default.static('public'));\n\napp.get('*', _render2.default);\n\napp.listen(3000, function () {\n  console.log('Listening on port 3000');\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc2VydmVyL2luZGV4LmpzP2Q5YzIiXSwibmFtZXMiOlsiYXBwIiwidXNlIiwicHJveHlSZXFPcHREZWNvcmF0b3IiLCJvcHRzIiwiaGVhZGVycyIsInN0YXRpYyIsImdldCIsImxpc3RlbiIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7O0FBQUE7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFHQSxJQUFNQSxNQUFNLHdCQUFaOztBQUVBQSxJQUFJQyxHQUFKLENBQVEsTUFBUixFQUFnQixnQ0FBTSxvQ0FBTixFQUE0QztBQUMxREMsc0JBRDBELGdDQUNwQ0MsSUFEb0MsRUFDOUI7QUFDMUJBLFNBQUtDLE9BQUwsQ0FBYSxrQkFBYixJQUFtQyxnQkFBbkM7QUFDQSxXQUFPRCxJQUFQO0FBQ0Q7QUFKeUQsQ0FBNUMsQ0FBaEI7O0FBT0FILElBQUlDLEdBQUosQ0FBUSxrQkFBUUksTUFBUixDQUFlLFFBQWYsQ0FBUjs7QUFFQUwsSUFBSU0sR0FBSixDQUFRLEdBQVI7O0FBR0FOLElBQUlPLE1BQUosQ0FBVyxJQUFYLEVBQWlCLFlBQU07QUFDckJDLFVBQVFDLEdBQVI7QUFDRCxDQUZEIiwiZmlsZSI6IjguanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJ2JhYmVsLXBvbHlmaWxsJztcbmltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnO1xuaW1wb3J0IHByb3h5IGZyb20gJ2V4cHJlc3MtaHR0cC1wcm94eSc7XG5pbXBvcnQgcmVuZGVyQXBwIGZyb20gJ3NlcnZlci9yZW5kZXInO1xuXG5cbmNvbnN0IGFwcCA9IGV4cHJlc3MoKTtcblxuYXBwLnVzZSgnL2FwaScsIHByb3h5KCdodHRwOi8vcmVhY3Qtc3NyLWFwaS5oZXJva3VhcHAuY29tJywge1xuICBwcm94eVJlcU9wdERlY29yYXRvciAob3B0cykge1xuICAgIG9wdHMuaGVhZGVyc1sneC1mb3J3YXJkZWQtaG9zdCddID0gJ2xvY2FsaG9zdDozMDAwJztcbiAgICByZXR1cm4gb3B0cztcbiAgfVxufSkpXG5cbmFwcC51c2UoZXhwcmVzcy5zdGF0aWMoJ3B1YmxpYycpKTtcblxuYXBwLmdldCgnKicsIHJlbmRlckFwcClcblxuXG5hcHAubGlzdGVuKDMwMDAsICgpID0+IHtcbiAgY29uc29sZS5sb2coYExpc3RlbmluZyBvbiBwb3J0IDMwMDBgKTtcbn0pO1xuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL3NlcnZlci9pbmRleC5qcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///8\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _redux = __webpack_require__(8);
+
+var _adminsReducer = __webpack_require__(24);
+
+var _adminsReducer2 = _interopRequireDefault(_adminsReducer);
+
+var _usersReducer = __webpack_require__(25);
+
+var _usersReducer2 = _interopRequireDefault(_usersReducer);
+
+var _authReducer = __webpack_require__(26);
+
+var _authReducer2 = _interopRequireDefault(_authReducer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _redux.combineReducers)({
+  admins: _adminsReducer2.default,
+  auth: _authReducer2.default,
+  users: _usersReducer2.default
+});
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = require(\"babel-polyfill\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJiYWJlbC1wb2x5ZmlsbFwiP2QwZDYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiOS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcImJhYmVsLXBvbHlmaWxsXCIpO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIGV4dGVybmFsIFwiYmFiZWwtcG9seWZpbGxcIlxuLy8gbW9kdWxlIGlkID0gOVxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///9\n");
+"use strict";
+
+
+__webpack_require__(10);
+
+var _express = __webpack_require__(11);
+
+var _express2 = _interopRequireDefault(_express);
+
+var _expressHttpProxy = __webpack_require__(12);
+
+var _expressHttpProxy2 = _interopRequireDefault(_expressHttpProxy);
+
+var _render = __webpack_require__(13);
+
+var _render2 = _interopRequireDefault(_render);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = (0, _express2.default)();
+
+app.use('/api', (0, _expressHttpProxy2.default)('http://react-ssr-api.herokuapp.com', {
+  proxyReqOptDecorator: function proxyReqOptDecorator(opts) {
+    opts.headers['x-forwarded-host'] = 'localhost:3000';
+    return opts;
+  }
+}));
+
+app.use(_express2.default.static('public'));
+
+app.get('*', _render2.default);
+
+app.listen(3000, function () {
+  console.log('Listening on port 3000');
+});
 
 /***/ }),
 /* 10 */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"express\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJleHByZXNzXCI/ZDJkMiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiIxMC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcImV4cHJlc3NcIik7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gZXh0ZXJuYWwgXCJleHByZXNzXCJcbi8vIG1vZHVsZSBpZCA9IDEwXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///10\n");
+module.exports = require("babel-polyfill");
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"express-http-proxy\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJleHByZXNzLWh0dHAtcHJveHlcIj9iZmY3Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjExLmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwiZXhwcmVzcy1odHRwLXByb3h5XCIpO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIGV4dGVybmFsIFwiZXhwcmVzcy1odHRwLXByb3h5XCJcbi8vIG1vZHVsZSBpZCA9IDExXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///11\n");
+module.exports = require("express");
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(0);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _server = __webpack_require__(13);\n\nvar _reactRouterDom = __webpack_require__(3);\n\nvar _reactRedux = __webpack_require__(2);\n\nvar _reactRouterConfig = __webpack_require__(4);\n\nvar _routes = __webpack_require__(14);\n\nvar _routes2 = _interopRequireDefault(_routes);\n\nvar _serializeJavascript = __webpack_require__(21);\n\nvar _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);\n\nvar _store = __webpack_require__(22);\n\nvar _store2 = _interopRequireDefault(_store);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = function (req, res) {\n  // --------------------- need the cookie from the req obj in order to authenticate\n  // --------------------- proxied API request from the client\n  var store = (0, _store2.default)(req);\n  // ---------------- matchRoutes generates array of route objs (from src/routes)\n  // ---------------- that match the requested URL\n  var matchedRoutes = (0, _reactRouterConfig.matchRoutes)(_routes2.default, req.path);\n  var page = matchedRoutes.find(function (_ref) {\n    var route = _ref.route;\n    return route.title;\n  }).route;\n  var dataLoading = matchedRoutes.map(function (_ref2) {\n    var component = _ref2.route.component;\n\n    // we can pre-load the redux store with any async data needed by the components\n    // by checking each component for a loadData class method and calling it\n    // with the store passed. Be sure it returns a promise so we can wait on\n    // Promise.all below\n    if (component.loadData) return component.loadData(store);\n  });\n  // only after all the necessary data has been loaded to the redux store\n  // do we render the app to a string (or stream!) and send the request\n  Promise.all(dataLoading).then(function () {\n    var context = { wat: 'wat' };\n    var appContent = (0, _server.renderToString)(_react2.default.createElement(\n      _reactRedux.Provider,\n      { store: store },\n      _react2.default.createElement(\n        _reactRouterDom.StaticRouter,\n        { location: req.path, context: context },\n        _react2.default.createElement(\n          'div',\n          null,\n          (0, _reactRouterConfig.renderRoutes)(_routes2.default)\n        )\n      )\n    ));\n\n    var html = '<html>\\n          <head>\\n            <meta charset=\"UTF-8\">\\n            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n            <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\\n            <title>' + page.title + '</title>\\n            <script>\\n              window.INITIAL_STATE = ' + (0, _serializeJavascript2.default)(store.getState(), { isJSON: true }) + '\\n            </script>\\n            <script defer src=\"bundle.js\"></script>\\n          </head>\\n          <body>\\n            <div id=\"root\">' + appContent + '</div>\\n            </body>\\n          </html>';\n\n    if (context.notFound) res.status(404);\n    res.send(html);\n    // res.write(documentTop);\n    // const stream = renderToNodeStream(reactApp)\n    // stream.pipe(res, {end: false});\n    // stream.on('end', () => {\n    //   res.write(documentBottom);\n    //   res.end(404);\n    // })\n  });\n\n  // const content = renderToNodeStream(\n  //   <Provider store={store}>\n  //     <StaticRouter location={req.path} context={{}}>\n  //       {/* transforms our arr of route objs to <Route /> components */}\n  //       <div>{renderRoutes(Routes)}</div>\n  //     </StaticRouter>\n  //   </Provider>\n  // );\n  // return `\n  //   <html>\n  //     <head>\n  //       <meta charset=\"UTF-8\">\n  //       <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  //       <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n  //       <title>${page.title}</title>\n  //       <script>\n  //         window.INITIAL_STATE = ${serialize(store.getState(), {isJSON: true})}\n  //       </script>\n  //       <script defer src=\"bundle.js\"></script>\n  //     </head>\n  //     <body>\n  //       <div id=\"root\">\n  //         ${content}\n  //       </div>\n  //     </body>\n  //   </html>\n  // `;\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc2VydmVyL3JlbmRlci5qcz9jODlmIl0sIm5hbWVzIjpbInJlcSIsInJlcyIsInN0b3JlIiwibWF0Y2hlZFJvdXRlcyIsInBhdGgiLCJwYWdlIiwiZmluZCIsInJvdXRlIiwidGl0bGUiLCJkYXRhTG9hZGluZyIsIm1hcCIsImNvbXBvbmVudCIsImxvYWREYXRhIiwiUHJvbWlzZSIsImFsbCIsInRoZW4iLCJjb250ZXh0Iiwid2F0IiwiYXBwQ29udGVudCIsImh0bWwiLCJnZXRTdGF0ZSIsImlzSlNPTiIsIm5vdEZvdW5kIiwic3RhdHVzIiwic2VuZCJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFDQTs7OztBQUNBOzs7O0FBRUE7Ozs7OztrQkFFZSxVQUFDQSxHQUFELEVBQU1DLEdBQU4sRUFBYztBQUMzQjtBQUNBO0FBQ0EsTUFBTUMsUUFBUSxxQkFBZUYsR0FBZixDQUFkO0FBQ0E7QUFDQTtBQUNBLE1BQU1HLGdCQUFnQixzREFBb0JILElBQUlJLElBQXhCLENBQXRCO0FBQ0EsTUFBTUMsT0FBT0YsY0FBY0csSUFBZCxDQUFtQjtBQUFBLFFBQUVDLEtBQUYsUUFBRUEsS0FBRjtBQUFBLFdBQWFBLE1BQU1DLEtBQW5CO0FBQUEsR0FBbkIsRUFBNkNELEtBQTFEO0FBQ0EsTUFBTUUsY0FBY04sY0FBY08sR0FBZCxDQUFrQixpQkFBMEI7QUFBQSxRQUFoQkMsU0FBZ0IsU0FBeEJKLEtBQXdCLENBQWhCSSxTQUFnQjs7QUFDOUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQSxRQUFJQSxVQUFVQyxRQUFkLEVBQXdCLE9BQU9ELFVBQVVDLFFBQVYsQ0FBbUJWLEtBQW5CLENBQVA7QUFDekIsR0FObUIsQ0FBcEI7QUFPQTtBQUNBO0FBQ0FXLFVBQVFDLEdBQVIsQ0FBWUwsV0FBWixFQUNHTSxJQURILENBQ1EsWUFBTTtBQUNWLFFBQU1DLFVBQVUsRUFBQ0MsS0FBSyxLQUFOLEVBQWhCO0FBQ0EsUUFBTUMsYUFBYSw0QkFDakI7QUFBQTtBQUFBLFFBQVUsT0FBT2hCLEtBQWpCO0FBQ0U7QUFBQTtBQUFBLFVBQWMsVUFBVUYsSUFBSUksSUFBNUIsRUFBa0MsU0FBU1ksT0FBM0M7QUFFRTtBQUFBO0FBQUE7QUFBTTtBQUFOO0FBRkY7QUFERixLQURpQixDQUFuQjs7QUFTQSxRQUFNRyxvUEFNU2QsS0FBS0csS0FOZCw2RUFRMkIsbUNBQVVOLE1BQU1rQixRQUFOLEVBQVYsRUFBNEIsRUFBQ0MsUUFBUSxJQUFULEVBQTVCLENBUjNCLHNKQWFpQkgsVUFiakIsbURBQU47O0FBaUJBLFFBQUlGLFFBQVFNLFFBQVosRUFBc0JyQixJQUFJc0IsTUFBSixDQUFXLEdBQVg7QUFDdEJ0QixRQUFJdUIsSUFBSixDQUFTTCxJQUFUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDRCxHQXRDSDs7QUEwQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0QsQyIsImZpbGUiOiIxMi5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQge3JlbmRlclRvTm9kZVN0cmVhbSwgcmVuZGVyVG9TdHJpbmd9IGZyb20gJ3JlYWN0LWRvbS9zZXJ2ZXInO1xuaW1wb3J0IHtTdGF0aWNSb3V0ZXJ9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nO1xuaW1wb3J0IHtQcm92aWRlcn0gZnJvbSAncmVhY3QtcmVkdXgnO1xuaW1wb3J0IHtyZW5kZXJSb3V0ZXN9IGZyb20gJ3JlYWN0LXJvdXRlci1jb25maWcnO1xuaW1wb3J0IFJvdXRlcyBmcm9tICdyb3V0ZXMnO1xuaW1wb3J0IHNlcmlhbGl6ZSBmcm9tICdzZXJpYWxpemUtamF2YXNjcmlwdCc7XG5pbXBvcnQge21hdGNoUm91dGVzfSBmcm9tICdyZWFjdC1yb3V0ZXItY29uZmlnJztcbmltcG9ydCBjb25zdHJ1Y3RTdG9yZSBmcm9tICdzdG9yZSc7XG5cbmV4cG9ydCBkZWZhdWx0IChyZXEsIHJlcykgPT4ge1xuICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0gbmVlZCB0aGUgY29va2llIGZyb20gdGhlIHJlcSBvYmogaW4gb3JkZXIgdG8gYXV0aGVudGljYXRlXG4gIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLSBwcm94aWVkIEFQSSByZXF1ZXN0IGZyb20gdGhlIGNsaWVudFxuICBjb25zdCBzdG9yZSA9IGNvbnN0cnVjdFN0b3JlKHJlcSk7XG4gIC8vIC0tLS0tLS0tLS0tLS0tLS0gbWF0Y2hSb3V0ZXMgZ2VuZXJhdGVzIGFycmF5IG9mIHJvdXRlIG9ianMgKGZyb20gc3JjL3JvdXRlcylcbiAgLy8gLS0tLS0tLS0tLS0tLS0tLSB0aGF0IG1hdGNoIHRoZSByZXF1ZXN0ZWQgVVJMXG4gIGNvbnN0IG1hdGNoZWRSb3V0ZXMgPSBtYXRjaFJvdXRlcyhSb3V0ZXMsIHJlcS5wYXRoKTtcbiAgY29uc3QgcGFnZSA9IG1hdGNoZWRSb3V0ZXMuZmluZCgoe3JvdXRlfSkgPT4gcm91dGUudGl0bGUpLnJvdXRlO1xuICBjb25zdCBkYXRhTG9hZGluZyA9IG1hdGNoZWRSb3V0ZXMubWFwKCh7cm91dGU6IHtjb21wb25lbnR9fSkgPT4ge1xuICAgIC8vIHdlIGNhbiBwcmUtbG9hZCB0aGUgcmVkdXggc3RvcmUgd2l0aCBhbnkgYXN5bmMgZGF0YSBuZWVkZWQgYnkgdGhlIGNvbXBvbmVudHNcbiAgICAvLyBieSBjaGVja2luZyBlYWNoIGNvbXBvbmVudCBmb3IgYSBsb2FkRGF0YSBjbGFzcyBtZXRob2QgYW5kIGNhbGxpbmcgaXRcbiAgICAvLyB3aXRoIHRoZSBzdG9yZSBwYXNzZWQuIEJlIHN1cmUgaXQgcmV0dXJucyBhIHByb21pc2Ugc28gd2UgY2FuIHdhaXQgb25cbiAgICAvLyBQcm9taXNlLmFsbCBiZWxvd1xuICAgIGlmIChjb21wb25lbnQubG9hZERhdGEpIHJldHVybiBjb21wb25lbnQubG9hZERhdGEoc3RvcmUpXG4gIH0pXG4gIC8vIG9ubHkgYWZ0ZXIgYWxsIHRoZSBuZWNlc3NhcnkgZGF0YSBoYXMgYmVlbiBsb2FkZWQgdG8gdGhlIHJlZHV4IHN0b3JlXG4gIC8vIGRvIHdlIHJlbmRlciB0aGUgYXBwIHRvIGEgc3RyaW5nIChvciBzdHJlYW0hKSBhbmQgc2VuZCB0aGUgcmVxdWVzdFxuICBQcm9taXNlLmFsbChkYXRhTG9hZGluZylcbiAgICAudGhlbigoKSA9PiB7XG4gICAgICBjb25zdCBjb250ZXh0ID0ge3dhdDogJ3dhdCd9O1xuICAgICAgY29uc3QgYXBwQ29udGVudCA9IHJlbmRlclRvU3RyaW5nKFxuICAgICAgICA8UHJvdmlkZXIgc3RvcmU9e3N0b3JlfT5cbiAgICAgICAgICA8U3RhdGljUm91dGVyIGxvY2F0aW9uPXtyZXEucGF0aH0gY29udGV4dD17Y29udGV4dH0+XG4gICAgICAgICAgICB7LyogdHJhbnNmb3JtcyBvdXIgYXJyIG9mIHJvdXRlIG9ianMgdG8gPFJvdXRlIC8+IGNvbXBvbmVudHMgKi99XG4gICAgICAgICAgICA8ZGl2PntyZW5kZXJSb3V0ZXMoUm91dGVzKX08L2Rpdj5cbiAgICAgICAgICA8L1N0YXRpY1JvdXRlcj5cbiAgICAgICAgPC9Qcm92aWRlcj5cbiAgICAgICk7XG5cbiAgICAgIGNvbnN0IGh0bWwgPVxuICAgICAgICBgPGh0bWw+XG4gICAgICAgICAgPGhlYWQ+XG4gICAgICAgICAgICA8bWV0YSBjaGFyc2V0PVwiVVRGLThcIj5cbiAgICAgICAgICAgIDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wXCI+XG4gICAgICAgICAgICA8bWV0YSBodHRwLWVxdWl2PVwiWC1VQS1Db21wYXRpYmxlXCIgY29udGVudD1cImllPWVkZ2VcIj5cbiAgICAgICAgICAgIDx0aXRsZT4ke3BhZ2UudGl0bGV9PC90aXRsZT5cbiAgICAgICAgICAgIDxzY3JpcHQ+XG4gICAgICAgICAgICAgIHdpbmRvdy5JTklUSUFMX1NUQVRFID0gJHtzZXJpYWxpemUoc3RvcmUuZ2V0U3RhdGUoKSwge2lzSlNPTjogdHJ1ZX0pfVxuICAgICAgICAgICAgPC9zY3JpcHQ+XG4gICAgICAgICAgICA8c2NyaXB0IGRlZmVyIHNyYz1cImJ1bmRsZS5qc1wiPjwvc2NyaXB0PlxuICAgICAgICAgIDwvaGVhZD5cbiAgICAgICAgICA8Ym9keT5cbiAgICAgICAgICAgIDxkaXYgaWQ9XCJyb290XCI+JHthcHBDb250ZW50fTwvZGl2PlxuICAgICAgICAgICAgPC9ib2R5PlxuICAgICAgICAgIDwvaHRtbD5gO1xuXG4gICAgICBpZiAoY29udGV4dC5ub3RGb3VuZCkgcmVzLnN0YXR1cyg0MDQpO1xuICAgICAgcmVzLnNlbmQoaHRtbClcbiAgICAgIC8vIHJlcy53cml0ZShkb2N1bWVudFRvcCk7XG4gICAgICAvLyBjb25zdCBzdHJlYW0gPSByZW5kZXJUb05vZGVTdHJlYW0ocmVhY3RBcHApXG4gICAgICAvLyBzdHJlYW0ucGlwZShyZXMsIHtlbmQ6IGZhbHNlfSk7XG4gICAgICAvLyBzdHJlYW0ub24oJ2VuZCcsICgpID0+IHtcbiAgICAgIC8vICAgcmVzLndyaXRlKGRvY3VtZW50Qm90dG9tKTtcbiAgICAgIC8vICAgcmVzLmVuZCg0MDQpO1xuICAgICAgLy8gfSlcbiAgICB9KVxuXG5cblxuICAvLyBjb25zdCBjb250ZW50ID0gcmVuZGVyVG9Ob2RlU3RyZWFtKFxuICAvLyAgIDxQcm92aWRlciBzdG9yZT17c3RvcmV9PlxuICAvLyAgICAgPFN0YXRpY1JvdXRlciBsb2NhdGlvbj17cmVxLnBhdGh9IGNvbnRleHQ9e3t9fT5cbiAgLy8gICAgICAgey8qIHRyYW5zZm9ybXMgb3VyIGFyciBvZiByb3V0ZSBvYmpzIHRvIDxSb3V0ZSAvPiBjb21wb25lbnRzICovfVxuICAvLyAgICAgICA8ZGl2PntyZW5kZXJSb3V0ZXMoUm91dGVzKX08L2Rpdj5cbiAgLy8gICAgIDwvU3RhdGljUm91dGVyPlxuICAvLyAgIDwvUHJvdmlkZXI+XG4gIC8vICk7XG4gIC8vIHJldHVybiBgXG4gIC8vICAgPGh0bWw+XG4gIC8vICAgICA8aGVhZD5cbiAgLy8gICAgICAgPG1ldGEgY2hhcnNldD1cIlVURi04XCI+XG4gIC8vICAgICAgIDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wXCI+XG4gIC8vICAgICAgIDxtZXRhIGh0dHAtZXF1aXY9XCJYLVVBLUNvbXBhdGlibGVcIiBjb250ZW50PVwiaWU9ZWRnZVwiPlxuICAvLyAgICAgICA8dGl0bGU+JHtwYWdlLnRpdGxlfTwvdGl0bGU+XG4gIC8vICAgICAgIDxzY3JpcHQ+XG4gIC8vICAgICAgICAgd2luZG93LklOSVRJQUxfU1RBVEUgPSAke3NlcmlhbGl6ZShzdG9yZS5nZXRTdGF0ZSgpLCB7aXNKU09OOiB0cnVlfSl9XG4gIC8vICAgICAgIDwvc2NyaXB0PlxuICAvLyAgICAgICA8c2NyaXB0IGRlZmVyIHNyYz1cImJ1bmRsZS5qc1wiPjwvc2NyaXB0PlxuICAvLyAgICAgPC9oZWFkPlxuICAvLyAgICAgPGJvZHk+XG4gIC8vICAgICAgIDxkaXYgaWQ9XCJyb290XCI+XG4gIC8vICAgICAgICAgJHtjb250ZW50fVxuICAvLyAgICAgICA8L2Rpdj5cbiAgLy8gICAgIDwvYm9keT5cbiAgLy8gICA8L2h0bWw+XG4gIC8vIGA7XG59XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gLi9zcmMvc2VydmVyL3JlbmRlci5qcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///12\n");
+module.exports = require("express-http-proxy");
 
 /***/ }),
 /* 13 */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"react-dom/server\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC1kb20vc2VydmVyXCI/NDFiZCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiIxMy5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0LWRvbS9zZXJ2ZXJcIik7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gZXh0ZXJuYWwgXCJyZWFjdC1kb20vc2VydmVyXCJcbi8vIG1vZHVsZSBpZCA9IDEzXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///13\n");
-
-/***/ }),
-/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(0);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _App = __webpack_require__(15);\n\nvar _App2 = _interopRequireDefault(_App);\n\nvar _HomePage = __webpack_require__(17);\n\nvar _HomePage2 = _interopRequireDefault(_HomePage);\n\nvar _AdminsListPage = __webpack_require__(18);\n\nvar _AdminsListPage2 = _interopRequireDefault(_AdminsListPage);\n\nvar _UsersListPage = __webpack_require__(19);\n\nvar _UsersListPage2 = _interopRequireDefault(_UsersListPage);\n\nvar _NotFoundPage = __webpack_require__(20);\n\nvar _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = [{\n  component: _App2.default,\n  routes: [{\n    path: '/',\n    exact: true,\n    title: 'Home',\n    component: _HomePage2.default\n  }, {\n    path: '/admins',\n    component: _AdminsListPage2.default,\n    title: 'Admins List'\n  }, {\n    path: '/users',\n    component: _UsersListPage2.default,\n    title: 'Users Lists'\n  }, {\n    component: _NotFoundPage2.default,\n    title: 'Not Found'\n  }]\n}];//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvcm91dGVzL2luZGV4LmpzPzBjZmYiXSwibmFtZXMiOlsiY29tcG9uZW50Iiwicm91dGVzIiwicGF0aCIsImV4YWN0IiwidGl0bGUiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7Ozs7O2tCQUVlLENBQ2I7QUFDRUEsMEJBREY7QUFFRUMsVUFBUSxDQUNOO0FBQ0VDLFVBQU0sR0FEUjtBQUVFQyxXQUFPLElBRlQ7QUFHRUMsV0FBTyxNQUhUO0FBSUVKO0FBSkYsR0FETSxFQU9OO0FBQ0VFLFVBQU0sU0FEUjtBQUVFRix1Q0FGRjtBQUdFSSxXQUFPO0FBSFQsR0FQTSxFQVlOO0FBQ0VGLFVBQU0sUUFEUjtBQUVFRixzQ0FGRjtBQUdFSSxXQUFPO0FBSFQsR0FaTSxFQWlCTjtBQUNFSixxQ0FERjtBQUVFSSxXQUFPO0FBRlQsR0FqQk07QUFGVixDQURhLEMiLCJmaWxlIjoiMTQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IEFwcCBmcm9tICdjbGllbnQvY29tcG9uZW50cy9BcHAnO1xuaW1wb3J0IEhvbWVQYWdlIGZyb20gJ2NsaWVudC9wYWdlcy9Ib21lUGFnZSc7XG5pbXBvcnQgQWRtaW5zTGlzdFBhZ2UgZnJvbSAnY2xpZW50L3BhZ2VzL0FkbWluc0xpc3RQYWdlJztcbmltcG9ydCBVc2Vyc0xpc3RQYWdlIGZyb20gJ2NsaWVudC9wYWdlcy9Vc2Vyc0xpc3RQYWdlJztcbmltcG9ydCBOb3RGb3VuZFBhZ2UgZnJvbSAnY2xpZW50L3BhZ2VzL05vdEZvdW5kUGFnZSc7XG5cbmV4cG9ydCBkZWZhdWx0IFtcbiAge1xuICAgIGNvbXBvbmVudDogQXBwLFxuICAgIHJvdXRlczogW1xuICAgICAge1xuICAgICAgICBwYXRoOiAnLycsXG4gICAgICAgIGV4YWN0OiB0cnVlLFxuICAgICAgICB0aXRsZTogJ0hvbWUnLFxuICAgICAgICBjb21wb25lbnQ6IEhvbWVQYWdlLFxuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgcGF0aDogJy9hZG1pbnMnLFxuICAgICAgICBjb21wb25lbnQ6IEFkbWluc0xpc3RQYWdlLFxuICAgICAgICB0aXRsZTogJ0FkbWlucyBMaXN0J1xuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgcGF0aDogJy91c2VycycsXG4gICAgICAgIGNvbXBvbmVudDogVXNlcnNMaXN0UGFnZSxcbiAgICAgICAgdGl0bGU6ICdVc2VycyBMaXN0cycsXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICBjb21wb25lbnQ6IE5vdEZvdW5kUGFnZSxcbiAgICAgICAgdGl0bGU6ICdOb3QgRm91bmQnLFxuICAgICAgfSxcbiAgICBdXG4gIH1cblxuXTtcblxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL3JvdXRlcy9pbmRleC5qcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///14\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _server = __webpack_require__(14);
+
+var _reactRouterDom = __webpack_require__(3);
+
+var _reactRedux = __webpack_require__(2);
+
+var _reactRouterConfig = __webpack_require__(4);
+
+var _routes = __webpack_require__(15);
+
+var _routes2 = _interopRequireDefault(_routes);
+
+var _serializeJavascript = __webpack_require__(6);
+
+var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
+
+var _store = __webpack_require__(23);
+
+var _store2 = _interopRequireDefault(_store);
+
+var _buildHTML = __webpack_require__(29);
+
+var _buildHTML2 = _interopRequireDefault(_buildHTML);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (req, res) {
+  // --------------------- need the cookie from the req obj in order to authenticate
+  // --------------------- proxied API request from the client
+  var store = (0, _store2.default)(req);
+  // ---------------- matchRoutes generates array of route objs (from src/routes)
+  // ---------------- that match the requested URL
+  var matchedRoutes = (0, _reactRouterConfig.matchRoutes)(_routes2.default, req.path);
+  var page = matchedRoutes.find(function (_ref) {
+    var route = _ref.route;
+    return route.title;
+  }).route;
+  var dataLoading = matchedRoutes.map(function (_ref2) {
+    var component = _ref2.route.component;
+
+    // we can pre-load the redux store with any async data needed by the components
+    // by checking each component for a loadData class method and calling it
+    // with the store passed. Be sure it returns a promise so we can wait on
+    // Promise.all below
+    if (component.loadData) return component.loadData(store);
+  });
+
+  var dontReject = function dontReject(promise) {
+    if (promise) {
+      return new Promise(function (fulfill) {
+        promise.then(fulfill).catch(fulfill);
+      });
+    }
+  };
+
+  // only after all the necessary data has been loaded to the redux store
+  // do we render the app to a string (or stream!) and send the request.
+  // dontReject helps us handle a "gotcha" from Promise.all: if any of the thunk
+  // requests fail, Promise.all will short-circuit any still pending promises and just
+  // jump right to the .catch callback. That behavior would lead to undesireable
+  // results for the user
+  Promise.all(dataLoading.map(dontReject)).then(function () {
+    // holding a reference to the context object before it's passed to
+    // the app and rendered will allow us to check for important application
+    // state after it's rendered, which will allow us to determine precisely
+    // how to respond to the http request depnding on what get's rendered by
+    //the Router logic
+    var context = {};
+
+    var appString = (0, _server.renderToString)(_react2.default.createElement(
+      _reactRedux.Provider,
+      { store: store },
+      _react2.default.createElement(
+        _reactRouterDom.StaticRouter,
+        { location: req.path, context: context },
+        _react2.default.createElement(
+          'div',
+          null,
+          (0, _reactRouterConfig.renderRoutes)(_routes2.default)
+        )
+      )
+    ));
+
+    var html = (0, _buildHTML2.default)(store, appString);
+    // context.url is only added if <Redirect /> is rendered
+    if (context.url) return res.redirect(301, context.url);
+    // context.notFound is set if the <NotFoundPage /> is rendered
+    if (context.notFound) res.status(404);
+    res.send(html);
+    // res.write(documentTop);
+    // const stream = renderToNodeStream(reactApp)
+    // stream.pipe(res, {end: false});
+    // stream.on('end', () => {
+    //   res.write(documentBottom);
+    //   res.end(404);
+    // })
+  }).catch(function (reason) {
+    console.error(reason.response);
+    res.sendStatus(500);
+  });
+
+  // const content = renderToNodeStream(
+  //   <Provider store={store}>
+  //     <StaticRouter location={req.path} context={{}}>
+  //       {/* transforms our arr of route objs to <Route /> components */}
+  //       <div>{renderRoutes(Routes)}</div>
+  //     </StaticRouter>
+  //   </Provider>
+  // );
+  // return `
+  //   <html>
+  //     <head>
+  //       <meta charset="UTF-8">
+  //       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  //       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  //       <title>${page.title}</title>
+  //       <script>
+  //         window.INITIAL_STATE = ${serialize(store.getState(), {isJSON: true})}
+  //       </script>
+  //       <script defer src="bundle.js"></script>
+  //     </head>
+  //     <body>
+  //       <div id="root">
+  //         ${content}
+  //       </div>
+  //     </body>
+  //   </html>
+  // `;
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-dom/server");
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(0);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterConfig = __webpack_require__(4);\n\nvar _Header = __webpack_require__(16);\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nvar _actions = __webpack_require__(1);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App(_ref) {\n  var route = _ref.route;\n\n\n  return _react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(_Header2.default, null),\n    (0, _reactRouterConfig.renderRoutes)(route.routes),\n    _react2.default.createElement(\n      'h2',\n      null,\n      'Footer'\n    )\n  );\n};\n\nApp.loadData = function (store) {\n  return store.dispatch((0, _actions.fetchCurrentUser)());\n};\nexports.default = App;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY2xpZW50L2NvbXBvbmVudHMvQXBwLmpzPzI5ZmQiXSwibmFtZXMiOlsiQXBwIiwicm91dGUiLCJyb3V0ZXMiLCJsb2FkRGF0YSIsInN0b3JlIiwiZGlzcGF0Y2giXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7O0FBQ0E7O0FBQ0E7Ozs7QUFDQTs7OztBQUVBLElBQU1BLE1BQU0sU0FBTkEsR0FBTSxPQUFhO0FBQUEsTUFBWEMsS0FBVyxRQUFYQSxLQUFXOzs7QUFFdkIsU0FDRTtBQUFBO0FBQUE7QUFDRSx5REFERjtBQUVHLHlDQUFhQSxNQUFNQyxNQUFuQixDQUZIO0FBR0U7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUhGLEdBREY7QUFPRCxDQVREOztBQVlBRixJQUFJRyxRQUFKLEdBQWUsVUFBQ0MsS0FBRDtBQUFBLFNBQVdBLE1BQU1DLFFBQU4sQ0FBZSxnQ0FBZixDQUFYO0FBQUEsQ0FBZjtrQkFDZUwsRyIsImZpbGUiOiIxNS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQge3JlbmRlclJvdXRlc30gZnJvbSAncmVhY3Qtcm91dGVyLWNvbmZpZyc7XG5pbXBvcnQgSGVhZGVyIGZyb20gJ2NsaWVudC9jb21wb25lbnRzL0hlYWRlcic7XG5pbXBvcnQge2ZldGNoQ3VycmVudFVzZXJ9IGZyb20gJ3N0b3JlL2FjdGlvbnMnO1xuXG5jb25zdCBBcHAgPSAoe3JvdXRlfSkgPT4ge1xuXG4gIHJldHVybiAoXG4gICAgPGRpdj5cbiAgICAgIDxIZWFkZXIgLz5cbiAgICAgIHtyZW5kZXJSb3V0ZXMocm91dGUucm91dGVzKX1cbiAgICAgIDxoMj5Gb290ZXI8L2gyPlxuICAgIDwvZGl2PlxuICApXG59O1xuXG5cbkFwcC5sb2FkRGF0YSA9IChzdG9yZSkgPT4gc3RvcmUuZGlzcGF0Y2goZmV0Y2hDdXJyZW50VXNlcigpKTtcbmV4cG9ydCBkZWZhdWx0IEFwcDtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3NyYy9jbGllbnQvY29tcG9uZW50cy9BcHAuanMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///15\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _App = __webpack_require__(16);
+
+var _App2 = _interopRequireDefault(_App);
+
+var _HomePage = __webpack_require__(18);
+
+var _HomePage2 = _interopRequireDefault(_HomePage);
+
+var _AdminsListPage = __webpack_require__(19);
+
+var _AdminsListPage2 = _interopRequireDefault(_AdminsListPage);
+
+var _UsersListPage = __webpack_require__(21);
+
+var _UsersListPage2 = _interopRequireDefault(_UsersListPage);
+
+var _NotFoundPage = __webpack_require__(22);
+
+var _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = [{
+  component: _App2.default,
+  routes: [{
+    path: '/',
+    exact: true,
+    title: 'Home',
+    component: _HomePage2.default
+  }, {
+    path: '/admins',
+    component: _AdminsListPage2.default,
+    title: 'Admins List'
+  }, {
+    path: '/users',
+    component: _UsersListPage2.default,
+    title: 'Users Lists'
+  }, {
+    component: _NotFoundPage2.default,
+    title: 'Not Found'
+  }]
+}];
 
 /***/ }),
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(0);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(3);\n\nvar _reactRedux = __webpack_require__(2);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Header = function Header(_ref) {\n  var auth = _ref.auth;\n\n  var authButton = auth ? _react2.default.createElement(\n    'a',\n    { href: '/api/logout' },\n    'Logout'\n  ) : _react2.default.createElement(\n    'a',\n    { href: '/api/auth/google' },\n    'Login'\n  );\n\n  return _react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(\n      _reactRouterDom.Link,\n      { to: '/' },\n      'Home'\n    ),\n    _react2.default.createElement(\n      _reactRouterDom.Link,\n      { to: '/users' },\n      'Users'\n    ),\n    _react2.default.createElement(\n      _reactRouterDom.Link,\n      { to: '/admins' },\n      'Admins'\n    ),\n    authButton\n  );\n};\n\nvar mapState = function mapState(state) {\n  return { auth: state.auth };\n};\n\nexports.default = (0, _reactRedux.connect)(mapState)(Header);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY2xpZW50L2NvbXBvbmVudHMvSGVhZGVyLmpzPzdiYmYiXSwibmFtZXMiOlsiSGVhZGVyIiwiYXV0aCIsImF1dGhCdXR0b24iLCJtYXBTdGF0ZSIsInN0YXRlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTs7OztBQUNBOztBQUNBOzs7O0FBRUEsSUFBTUEsU0FBUyxTQUFUQSxNQUFTLE9BQVk7QUFBQSxNQUFWQyxJQUFVLFFBQVZBLElBQVU7O0FBQ3pCLE1BQU1DLGFBQWFELE9BQ2pCO0FBQUE7QUFBQSxNQUFHLE1BQUssYUFBUjtBQUFBO0FBQUEsR0FEaUIsR0FFakI7QUFBQTtBQUFBLE1BQUcsTUFBSyxrQkFBUjtBQUFBO0FBQUEsR0FGRjs7QUFJRixTQUNJO0FBQUE7QUFBQTtBQUNFO0FBQUE7QUFBQSxRQUFNLElBQUcsR0FBVDtBQUFBO0FBQUEsS0FERjtBQUVFO0FBQUE7QUFBQSxRQUFNLElBQUcsUUFBVDtBQUFBO0FBQUEsS0FGRjtBQUdFO0FBQUE7QUFBQSxRQUFNLElBQUcsU0FBVDtBQUFBO0FBQUEsS0FIRjtBQUlHQztBQUpILEdBREo7QUFRQyxDQWJEOztBQWVBLElBQU1DLFdBQVcsU0FBWEEsUUFBVztBQUFBLFNBQVUsRUFBQ0YsTUFBTUcsTUFBTUgsSUFBYixFQUFWO0FBQUEsQ0FBakI7O2tCQUVlLHlCQUFRRSxRQUFSLEVBQWtCSCxNQUFsQixDIiwiZmlsZSI6IjE2LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7TGlua30gZnJvbSAncmVhY3Qtcm91dGVyLWRvbSc7XG5pbXBvcnQge2Nvbm5lY3R9IGZyb20gJ3JlYWN0LXJlZHV4JztcblxuY29uc3QgSGVhZGVyID0gKHthdXRofSkgPT4ge1xuICBjb25zdCBhdXRoQnV0dG9uID0gYXV0aCA/XG4gICAgPGEgaHJlZj1cIi9hcGkvbG9nb3V0XCI+TG9nb3V0PC9hPiA6XG4gICAgPGEgaHJlZj1cIi9hcGkvYXV0aC9nb29nbGVcIj5Mb2dpbjwvYT47XG5cbnJldHVybiAoXG4gICAgPGRpdj5cbiAgICAgIDxMaW5rIHRvPVwiL1wiPkhvbWU8L0xpbms+XG4gICAgICA8TGluayB0bz1cIi91c2Vyc1wiPlVzZXJzPC9MaW5rPlxuICAgICAgPExpbmsgdG89XCIvYWRtaW5zXCI+QWRtaW5zPC9MaW5rPlxuICAgICAge2F1dGhCdXR0b259XG4gICAgPC9kaXY+XG4gIClcbn07XG5cbmNvbnN0IG1hcFN0YXRlID0gc3RhdGUgPT4gKHthdXRoOiBzdGF0ZS5hdXRofSk7XG5cbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3QobWFwU3RhdGUpKEhlYWRlcik7XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gLi9zcmMvY2xpZW50L2NvbXBvbmVudHMvSGVhZGVyLmpzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///16\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterConfig = __webpack_require__(4);
+
+var _Header = __webpack_require__(17);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _actions = __webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App(_ref) {
+  var route = _ref.route;
+
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_Header2.default, null),
+    (0, _reactRouterConfig.renderRoutes)(route.routes),
+    _react2.default.createElement(
+      'h2',
+      null,
+      'Footer'
+    )
+  );
+};
+
+App.loadData = function (store) {
+  return store.dispatch((0, _actions.fetchCurrentUser)());
+};
+exports.default = App;
 
 /***/ }),
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(0);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n\n  return _react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(\n      'div',\n      null,\n      'I\\'m the homiest pages!'\n    ),\n    _react2.default.createElement(\n      'button',\n      { onClick: function onClick() {\n          return console.log('hey');\n        } },\n      'Click'\n    )\n  );\n};\n\nexports.default = Home;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY2xpZW50L3BhZ2VzL0hvbWVQYWdlLmpzP2YzZDEiXSwibmFtZXMiOlsiSG9tZSIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7Ozs7QUFFQSxJQUFNQSxPQUFPLFNBQVBBLElBQU8sR0FBTTs7QUFFakIsU0FDRTtBQUFBO0FBQUE7QUFDRTtBQUFBO0FBQUE7QUFBQTtBQUFBLEtBREY7QUFFRTtBQUFBO0FBQUEsUUFBUSxTQUFTO0FBQUEsaUJBQU1DLFFBQVFDLEdBQVIsQ0FBWSxLQUFaLENBQU47QUFBQSxTQUFqQjtBQUFBO0FBQUE7QUFGRixHQURGO0FBTUQsQ0FSRDs7a0JBVWVGLEkiLCJmaWxlIjoiMTcuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuXG5jb25zdCBIb21lID0gKCkgPT4ge1xuXG4gIHJldHVybiAoXG4gICAgPGRpdj5cbiAgICAgIDxkaXY+SSdtIHRoZSBob21pZXN0IHBhZ2VzITwvZGl2PlxuICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiBjb25zb2xlLmxvZygnaGV5Jyl9PkNsaWNrPC9idXR0b24+XG4gICAgPC9kaXY+XG4gIClcbn1cblxuZXhwb3J0IGRlZmF1bHQgSG9tZTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3NyYy9jbGllbnQvcGFnZXMvSG9tZVBhZ2UuanMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///17\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(3);
+
+var _reactRedux = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header(_ref) {
+  var auth = _ref.auth;
+
+  var authButton = auth ? _react2.default.createElement(
+    'a',
+    { href: '/api/logout' },
+    'Logout'
+  ) : _react2.default.createElement(
+    'a',
+    { href: '/api/auth/google' },
+    'Login'
+  );
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      _reactRouterDom.Link,
+      { to: '/' },
+      'Home'
+    ),
+    _react2.default.createElement(
+      _reactRouterDom.Link,
+      { to: '/users' },
+      'Users'
+    ),
+    _react2.default.createElement(
+      _reactRouterDom.Link,
+      { to: '/admins' },
+      'Admins'
+    ),
+    authButton
+  );
+};
+
+var mapState = function mapState(state) {
+  return { auth: state.auth };
+};
+
+exports.default = (0, _reactRedux.connect)(mapState)(Header);
 
 /***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(0);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = __webpack_require__(2);\n\nvar _actions = __webpack_require__(1);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar AdminsListPage = function (_Component) {\n  _inherits(AdminsListPage, _Component);\n\n  function AdminsListPage() {\n    _classCallCheck(this, AdminsListPage);\n\n    return _possibleConstructorReturn(this, (AdminsListPage.__proto__ || Object.getPrototypeOf(AdminsListPage)).apply(this, arguments));\n  }\n\n  _createClass(AdminsListPage, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        null,\n        _react2.default.createElement(\n          'h2',\n          null,\n          'Protected List of Admins'\n        ),\n        _react2.default.createElement(\n          'ul',\n          null,\n          this.renderAdmins()\n        )\n      );\n    }\n  }, {\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.props.fetchAdmins();\n    }\n  }, {\n    key: 'renderAdmins',\n    value: function renderAdmins() {\n      return this.props.admins.map(function (admin) {\n        return _react2.default.createElement(\n          'li',\n          { key: admin.id },\n          admin.name\n        );\n      });\n    }\n  }]);\n\n  return AdminsListPage;\n}(_react.Component);\n\nAdminsListPage.loadData = function (_ref) {\n  var dispatch = _ref.dispatch;\n  return dispatch((0, _actions.fetchAdmins)());\n};\nvar mapState = function mapState(_ref2) {\n  var admins = _ref2.admins;\n  return { admins: admins };\n};\nexports.default = (0, _reactRedux.connect)(mapState, { fetchAdmins: _actions.fetchAdmins })(AdminsListPage);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY2xpZW50L3BhZ2VzL0FkbWluc0xpc3RQYWdlLmpzPzM0NzUiXSwibmFtZXMiOlsiQWRtaW5zTGlzdFBhZ2UiLCJyZW5kZXJBZG1pbnMiLCJwcm9wcyIsImZldGNoQWRtaW5zIiwiYWRtaW5zIiwibWFwIiwiYWRtaW4iLCJpZCIsIm5hbWUiLCJsb2FkRGF0YSIsImRpc3BhdGNoIiwibWFwU3RhdGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQUE7Ozs7QUFDQTs7QUFDQTs7Ozs7Ozs7OztJQUVNQSxjOzs7Ozs7Ozs7Ozs2QkFDTTtBQUNSLGFBQ0U7QUFBQTtBQUFBO0FBQ0U7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQURGO0FBRUU7QUFBQTtBQUFBO0FBQUssZUFBS0MsWUFBTDtBQUFMO0FBRkYsT0FERjtBQU1EOzs7d0NBRW9CO0FBQ25CLFdBQUtDLEtBQUwsQ0FBV0MsV0FBWDtBQUNEOzs7bUNBRWU7QUFDZCxhQUFPLEtBQUtELEtBQUwsQ0FBV0UsTUFBWCxDQUFrQkMsR0FBbEIsQ0FBc0IsaUJBQVM7QUFDcEMsZUFBTztBQUFBO0FBQUEsWUFBSSxLQUFLQyxNQUFNQyxFQUFmO0FBQW9CRCxnQkFBTUU7QUFBMUIsU0FBUDtBQUNELE9BRk0sQ0FBUDtBQUdEOzs7Ozs7QUFHSFIsZUFBZVMsUUFBZixHQUEwQjtBQUFBLE1BQUVDLFFBQUYsUUFBRUEsUUFBRjtBQUFBLFNBQWdCQSxTQUFTLDJCQUFULENBQWhCO0FBQUEsQ0FBMUI7QUFDQSxJQUFNQyxXQUFXLFNBQVhBLFFBQVc7QUFBQSxNQUFFUCxNQUFGLFNBQUVBLE1BQUY7QUFBQSxTQUFlLEVBQUNBLGNBQUQsRUFBZjtBQUFBLENBQWpCO2tCQUNlLHlCQUFRTyxRQUFSLEVBQWtCLEVBQUNSLGlDQUFELEVBQWxCLEVBQWlDSCxjQUFqQyxDIiwiZmlsZSI6IjE4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7Q29tcG9uZW50fSBmcm9tICdyZWFjdCc7XG5pbXBvcnQge2Nvbm5lY3R9IGZyb20gJ3JlYWN0LXJlZHV4JztcbmltcG9ydCB7ZmV0Y2hBZG1pbnN9IGZyb20gJ3N0b3JlL2FjdGlvbnMnO1xuXG5jbGFzcyBBZG1pbnNMaXN0UGFnZSBleHRlbmRzIENvbXBvbmVudCB7XG4gIHJlbmRlciAoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG4gICAgICAgIDxoMj5Qcm90ZWN0ZWQgTGlzdCBvZiBBZG1pbnM8L2gyPlxuICAgICAgICA8dWw+e3RoaXMucmVuZGVyQWRtaW5zKCl9PC91bD5cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH1cblxuICBjb21wb25lbnREaWRNb3VudCAoKSB7XG4gICAgdGhpcy5wcm9wcy5mZXRjaEFkbWlucygpO1xuICB9XG5cbiAgcmVuZGVyQWRtaW5zICgpIHtcbiAgICByZXR1cm4gdGhpcy5wcm9wcy5hZG1pbnMubWFwKGFkbWluID0+IHtcbiAgICAgIHJldHVybiA8bGkga2V5PXthZG1pbi5pZH0+e2FkbWluLm5hbWV9PC9saT47XG4gICAgfSk7XG4gIH1cbn1cblxuQWRtaW5zTGlzdFBhZ2UubG9hZERhdGEgPSAoe2Rpc3BhdGNofSkgPT4gZGlzcGF0Y2goZmV0Y2hBZG1pbnMoKSk7XG5jb25zdCBtYXBTdGF0ZSA9ICh7YWRtaW5zfSkgPT4gKHthZG1pbnN9KTtcbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3QobWFwU3RhdGUsIHtmZXRjaEFkbWluc30pKEFkbWluc0xpc3RQYWdlKTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3NyYy9jbGllbnQvcGFnZXMvQWRtaW5zTGlzdFBhZ2UuanMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///18\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Home = function Home() {
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      null,
+      'I\'m the homiest pages!'
+    ),
+    _react2.default.createElement(
+      'button',
+      { onClick: function onClick() {
+          return console.log('hey');
+        } },
+      'Click'
+    )
+  );
+};
+
+exports.default = Home;
 
 /***/ }),
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(0);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = __webpack_require__(2);\n\nvar _actions = __webpack_require__(1);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar UsersList = function (_Component) {\n  _inherits(UsersList, _Component);\n\n  function UsersList() {\n    _classCallCheck(this, UsersList);\n\n    return _possibleConstructorReturn(this, (UsersList.__proto__ || Object.getPrototypeOf(UsersList)).apply(this, arguments));\n  }\n\n  _createClass(UsersList, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        null,\n        'Here\\'s a list of users:',\n        _react2.default.createElement(\n          'ul',\n          null,\n          this.renderUsers()\n        )\n      );\n    }\n  }, {\n    key: 'componentDidMount',\n    value: function componentDidMount() {\n      this.props.fetchUsers();\n    }\n  }, {\n    key: 'renderUsers',\n    value: function renderUsers() {\n      return this.props.users.map(function (user) {\n        return _react2.default.createElement(\n          'li',\n          { key: user.id },\n          user.name\n        );\n      });\n    }\n  }], [{\n    key: 'loadData',\n    value: function loadData(store) {\n      return store.dispatch((0, _actions.fetchUsers)());\n    }\n  }]);\n\n  return UsersList;\n}(_react.Component);\n\nvar mapState = function mapState(state) {\n  return { users: state.users };\n};\n\nexports.default = (0, _reactRedux.connect)(mapState, { fetchUsers: _actions.fetchUsers })(UsersList);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY2xpZW50L3BhZ2VzL1VzZXJzTGlzdFBhZ2UuanM/NzRjMCJdLCJuYW1lcyI6WyJVc2Vyc0xpc3QiLCJyZW5kZXJVc2VycyIsInByb3BzIiwiZmV0Y2hVc2VycyIsInVzZXJzIiwibWFwIiwidXNlciIsImlkIiwibmFtZSIsInN0b3JlIiwiZGlzcGF0Y2giLCJtYXBTdGF0ZSIsInN0YXRlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBOzs7O0FBQ0E7O0FBQ0E7Ozs7Ozs7Ozs7SUFFTUEsUzs7Ozs7Ozs7Ozs7NkJBQ007QUFDUixhQUNFO0FBQUE7QUFBQTtBQUFBO0FBRUU7QUFBQTtBQUFBO0FBQ0csZUFBS0MsV0FBTDtBQURIO0FBRkYsT0FERjtBQVFEOzs7d0NBRW9CO0FBQ25CLFdBQUtDLEtBQUwsQ0FBV0MsVUFBWDtBQUNEOzs7a0NBRWM7QUFDYixhQUFPLEtBQUtELEtBQUwsQ0FBV0UsS0FBWCxDQUFpQkMsR0FBakIsQ0FBcUIsZ0JBQVE7QUFDbEMsZUFBTztBQUFBO0FBQUEsWUFBSSxLQUFLQyxLQUFLQyxFQUFkO0FBQW1CRCxlQUFLRTtBQUF4QixTQUFQO0FBQ0QsT0FGTSxDQUFQO0FBR0Q7Ozs2QkFFZ0JDLEssRUFBTztBQUN0QixhQUFPQSxNQUFNQyxRQUFOLENBQWUsMEJBQWYsQ0FBUDtBQUNEOzs7Ozs7QUFJSCxJQUFNQyxXQUFXLFNBQVhBLFFBQVc7QUFBQSxTQUFVLEVBQUNQLE9BQU9RLE1BQU1SLEtBQWQsRUFBVjtBQUFBLENBQWpCOztrQkFFZSx5QkFBUU8sUUFBUixFQUFrQixFQUFDUiwrQkFBRCxFQUFsQixFQUFnQ0gsU0FBaEMsQyIsImZpbGUiOiIxOS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwge0NvbXBvbmVudH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtjb25uZWN0fSBmcm9tICdyZWFjdC1yZWR1eCdcbmltcG9ydCB7ZmV0Y2hVc2Vyc30gZnJvbSAnc3RvcmUvYWN0aW9ucyc7XG5cbmNsYXNzIFVzZXJzTGlzdCBleHRlbmRzIENvbXBvbmVudCB7XG4gIHJlbmRlciAoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG4gICAgICAgIEhlcmUncyBhIGxpc3Qgb2YgdXNlcnM6XG4gICAgICAgIDx1bD5cbiAgICAgICAgICB7dGhpcy5yZW5kZXJVc2VycygpfVxuICAgICAgICA8L3VsPlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG5cbiAgY29tcG9uZW50RGlkTW91bnQgKCkge1xuICAgIHRoaXMucHJvcHMuZmV0Y2hVc2VycygpO1xuICB9XG5cbiAgcmVuZGVyVXNlcnMgKCkge1xuICAgIHJldHVybiB0aGlzLnByb3BzLnVzZXJzLm1hcCh1c2VyID0+IHtcbiAgICAgIHJldHVybiA8bGkga2V5PXt1c2VyLmlkfT57dXNlci5uYW1lfTwvbGk+XG4gICAgfSlcbiAgfVxuXG4gIHN0YXRpYyBsb2FkRGF0YSAoc3RvcmUpIHtcbiAgICByZXR1cm4gc3RvcmUuZGlzcGF0Y2goZmV0Y2hVc2VycygpKTtcbiAgfVxuXG59XG5cbmNvbnN0IG1hcFN0YXRlID0gc3RhdGUgPT4gKHt1c2Vyczogc3RhdGUudXNlcnN9KTtcblxuZXhwb3J0IGRlZmF1bHQgY29ubmVjdChtYXBTdGF0ZSwge2ZldGNoVXNlcnN9KShVc2Vyc0xpc3QpO1xuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL2NsaWVudC9wYWdlcy9Vc2Vyc0xpc3RQYWdlLmpzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///19\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(2);
+
+var _actions = __webpack_require__(1);
+
+var _requireAuth = __webpack_require__(20);
+
+var _requireAuth2 = _interopRequireDefault(_requireAuth);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AdminsListPage = function (_Component) {
+  _inherits(AdminsListPage, _Component);
+
+  function AdminsListPage() {
+    _classCallCheck(this, AdminsListPage);
+
+    return _possibleConstructorReturn(this, (AdminsListPage.__proto__ || Object.getPrototypeOf(AdminsListPage)).apply(this, arguments));
+  }
+
+  _createClass(AdminsListPage, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Protected List of Admins'
+        ),
+        _react2.default.createElement(
+          'ul',
+          null,
+          this.renderAdmins()
+        )
+      );
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.props.fetchAdmins();
+    }
+  }, {
+    key: 'renderAdmins',
+    value: function renderAdmins() {
+      return this.props.admins.map(function (admin) {
+        return _react2.default.createElement(
+          'li',
+          { key: admin.id },
+          admin.name
+        );
+      });
+    }
+  }]);
+
+  return AdminsListPage;
+}(_react.Component);
+
+var authEnforced = (0, _requireAuth2.default)(AdminsListPage);
+var mapState = function mapState(_ref) {
+  var admins = _ref.admins;
+  return { admins: admins };
+};
+var connectedToStore = (0, _reactRedux.connect)(mapState, { fetchAdmins: _actions.fetchAdmins })(authEnforced);
+connectedToStore.loadData = function (_ref2) {
+  var dispatch = _ref2.dispatch;
+  return dispatch((0, _actions.fetchAdmins)());
+};
+exports.default = connectedToStore;
 
 /***/ }),
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(0);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// StaticRouter swaps props.context with props.staticContext\nvar NotFoundPage = function NotFoundPage(_ref) {\n  var staticContext = _ref.staticContext;\n\n  staticContext.notFound = true;\n  console.log('NotFoundPage context: ', staticContext);\n  return _react2.default.createElement(\n    'h2',\n    null,\n    'The page you\\'re looking for doesn\\'t exist.'\n  );\n};\n\nexports.default = NotFoundPage;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY2xpZW50L3BhZ2VzL05vdEZvdW5kUGFnZS5qcz85OTU2Il0sIm5hbWVzIjpbIk5vdEZvdW5kUGFnZSIsInN0YXRpY0NvbnRleHQiLCJub3RGb3VuZCIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7Ozs7QUFFQTtBQUNBLElBQU1BLGVBQWUsU0FBZkEsWUFBZSxPQUFxQjtBQUFBLE1BQW5CQyxhQUFtQixRQUFuQkEsYUFBbUI7O0FBQ3hDQSxnQkFBY0MsUUFBZCxHQUF5QixJQUF6QjtBQUNBQyxVQUFRQyxHQUFSLENBQVksd0JBQVosRUFBc0NILGFBQXRDO0FBQ0EsU0FDRTtBQUFBO0FBQUE7QUFBQTtBQUFBLEdBREY7QUFHRCxDQU5EOztrQkFRZUQsWSIsImZpbGUiOiIyMC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbi8vIFN0YXRpY1JvdXRlciBzd2FwcyBwcm9wcy5jb250ZXh0IHdpdGggcHJvcHMuc3RhdGljQ29udGV4dFxuY29uc3QgTm90Rm91bmRQYWdlID0gKHtzdGF0aWNDb250ZXh0fSkgPT4ge1xuICBzdGF0aWNDb250ZXh0Lm5vdEZvdW5kID0gdHJ1ZTtcbiAgY29uc29sZS5sb2coJ05vdEZvdW5kUGFnZSBjb250ZXh0OiAnLCBzdGF0aWNDb250ZXh0KTtcbiAgcmV0dXJuIChcbiAgICA8aDI+VGhlIHBhZ2UgeW91J3JlIGxvb2tpbmcgZm9yIGRvZXNuJ3QgZXhpc3QuPC9oMj5cbiAgKVxufTtcblxuZXhwb3J0IGRlZmF1bHQgTm90Rm91bmRQYWdlO1xuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL2NsaWVudC9wYWdlcy9Ob3RGb3VuZFBhZ2UuanMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///20\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(2);
+
+var _reactRouterDom = __webpack_require__(3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+exports.default = function (AuthedComponent) {
+  var RequireAuth = function (_Component) {
+    _inherits(RequireAuth, _Component);
+
+    function RequireAuth() {
+      _classCallCheck(this, RequireAuth);
+
+      return _possibleConstructorReturn(this, (RequireAuth.__proto__ || Object.getPrototypeOf(RequireAuth)).apply(this, arguments));
+    }
+
+    _createClass(RequireAuth, [{
+      key: 'render',
+      value: function render() {
+        switch (this.props.auth) {
+          case false:
+            return _react2.default.createElement(_reactRouterDom.Redirect, { to: '/' });
+          case null:
+            return _react2.default.createElement(
+              'div',
+              null,
+              'Loading...'
+            );
+          default:
+            return _react2.default.createElement(AuthedComponent, this.props);
+        }
+      }
+    }]);
+
+    return RequireAuth;
+  }(_react.Component);
+
+  var mapState = function mapState(_ref) {
+    var auth = _ref.auth;
+    return { auth: auth };
+  };
+  return (0, _reactRedux.connect)(mapState)(RequireAuth);
+};
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = require(\"serialize-javascript\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJzZXJpYWxpemUtamF2YXNjcmlwdFwiPzViZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMjEuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJzZXJpYWxpemUtamF2YXNjcmlwdFwiKTtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyBleHRlcm5hbCBcInNlcmlhbGl6ZS1qYXZhc2NyaXB0XCJcbi8vIG1vZHVsZSBpZCA9IDIxXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///21\n");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(2);
+
+var _reactHelmet = __webpack_require__(30);
+
+var _actions = __webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var UsersList = function (_Component) {
+  _inherits(UsersList, _Component);
+
+  function UsersList() {
+    _classCallCheck(this, UsersList);
+
+    return _possibleConstructorReturn(this, (UsersList.__proto__ || Object.getPrototypeOf(UsersList)).apply(this, arguments));
+  }
+
+  _createClass(UsersList, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        this.setPageHeader(),
+        'Here\'s a list of users:',
+        _react2.default.createElement(
+          'ul',
+          null,
+          this.renderUsers()
+        )
+      );
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.props.fetchUsers();
+    }
+  }, {
+    key: 'setPageHeader',
+    value: function setPageHeader() {
+      return _react2.default.createElement(
+        _reactHelmet.Helmet,
+        null,
+        _react2.default.createElement(
+          'title',
+          null,
+          this.props.users.length + ' Users'
+        ),
+        _react2.default.createElement('meta', { property: 'og:title', content: 'Users App' })
+      );
+    }
+  }, {
+    key: 'renderUsers',
+    value: function renderUsers() {
+      return this.props.users.map(function (user) {
+        return _react2.default.createElement(
+          'li',
+          { key: user.id },
+          user.name
+        );
+      });
+    }
+  }], [{
+    key: 'loadData',
+    value: function loadData(store) {
+      return store.dispatch((0, _actions.fetchUsers)());
+    }
+  }]);
+
+  return UsersList;
+}(_react.Component);
+
+var mapState = function mapState(state) {
+  return { users: state.users };
+};
+
+exports.default = (0, _reactRedux.connect)(mapState, { fetchUsers: _actions.fetchUsers })(UsersList);
 
 /***/ }),
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.rootReducer = undefined;\n\nvar _reducers = __webpack_require__(6);\n\nObject.defineProperty(exports, 'rootReducer', {\n  enumerable: true,\n  get: function get() {\n    return _interopRequireDefault(_reducers).default;\n  }\n});\n\nvar _actions = __webpack_require__(1);\n\nObject.keys(_actions).forEach(function (key) {\n  if (key === \"default\" || key === \"__esModule\") return;\n  Object.defineProperty(exports, key, {\n    enumerable: true,\n    get: function get() {\n      return _actions[key];\n    }\n  });\n});\n\nvar _constructStore = __webpack_require__(26);\n\nvar _constructStore2 = _interopRequireDefault(_constructStore);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = _constructStore2.default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3RvcmUvaW5kZXguanM/MjFjOSJdLCJuYW1lcyI6WyJkZWZhdWx0Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7NkNBRVFBLE87Ozs7OztBQUNSO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTs7QUFIQSIsImZpbGUiOiIyMi5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBjb25zdHJ1Y3RTdG9yZSBmcm9tICdzdG9yZS9jb25zdHJ1Y3RTdG9yZSc7XG5leHBvcnQgZGVmYXVsdCBjb25zdHJ1Y3RTdG9yZTtcbmV4cG9ydCB7ZGVmYXVsdCBhcyByb290UmVkdWNlcn0gZnJvbSAnc3RvcmUvcmVkdWNlcnMnO1xuZXhwb3J0ICogZnJvbSAnc3RvcmUvYWN0aW9ucyc7XG5cblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3NyYy9zdG9yZS9pbmRleC5qcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///22\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// StaticRouter swaps props.context with props.staticContext
+var NotFoundPage = function NotFoundPage(_ref) {
+  var staticContext = _ref.staticContext;
+
+  staticContext.notFound = true;
+  console.log('NotFoundPage context: ', staticContext);
+  return _react2.default.createElement(
+    'h2',
+    null,
+    'The page you\'re looking for doesn\'t exist.'
+  );
+};
+
+exports.default = NotFoundPage;
 
 /***/ }),
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _actions = __webpack_require__(1);\n\nexports.default = function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];\n  var action = arguments[1];\n\n  switch (action.type) {\n    case _actions.FETCH_ADMINS:\n      return action.payload.data;\n    default:\n      return state;\n  }\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3RvcmUvcmVkdWNlcnMvYWRtaW5zUmVkdWNlci5qcz81ZjkyIl0sIm5hbWVzIjpbInN0YXRlIiwiYWN0aW9uIiwidHlwZSIsInBheWxvYWQiLCJkYXRhIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTs7a0JBRWUsWUFBd0I7QUFBQSxNQUF2QkEsS0FBdUIsdUVBQWYsRUFBZTtBQUFBLE1BQVhDLE1BQVc7O0FBQ3JDLFVBQVFBLE9BQU9DLElBQWY7QUFDRTtBQUFtQixhQUFPRCxPQUFPRSxPQUFQLENBQWVDLElBQXRCO0FBQ25CO0FBQVMsYUFBT0osS0FBUDtBQUZYO0FBSUQsQyIsImZpbGUiOiIyMy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7RkVUQ0hfQURNSU5TfSBmcm9tICdzdG9yZS9hY3Rpb25zJztcblxuZXhwb3J0IGRlZmF1bHQgKHN0YXRlID0gW10sIGFjdGlvbikgPT4ge1xuICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgY2FzZSBGRVRDSF9BRE1JTlM6IHJldHVybiBhY3Rpb24ucGF5bG9hZC5kYXRhO1xuICAgIGRlZmF1bHQ6IHJldHVybiBzdGF0ZTtcbiAgfVxufVxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL3N0b3JlL3JlZHVjZXJzL2FkbWluc1JlZHVjZXIuanMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///23\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.rootReducer = undefined;
+
+var _reducers = __webpack_require__(7);
+
+Object.defineProperty(exports, 'rootReducer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_reducers).default;
+  }
+});
+
+var _actions = __webpack_require__(1);
+
+Object.keys(_actions).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _actions[key];
+    }
+  });
+});
+
+var _constructStore = __webpack_require__(27);
+
+var _constructStore2 = _interopRequireDefault(_constructStore);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _constructStore2.default;
 
 /***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _actions = __webpack_require__(1);\n\nexports.default = function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];\n  var action = arguments[1];\n\n  switch (action.type) {\n    case _actions.FETCH_USERS:\n      return action.payload.data;\n    default:\n      return state;\n  }\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3RvcmUvcmVkdWNlcnMvdXNlcnNSZWR1Y2VyLmpzP2FlODEiXSwibmFtZXMiOlsic3RhdGUiLCJhY3Rpb24iLCJ0eXBlIiwicGF5bG9hZCIsImRhdGEiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOztrQkFFZSxZQUF3QjtBQUFBLE1BQXZCQSxLQUF1Qix1RUFBZixFQUFlO0FBQUEsTUFBWEMsTUFBVzs7QUFDckMsVUFBUUEsT0FBT0MsSUFBZjtBQUNFO0FBQWtCLGFBQU9ELE9BQU9FLE9BQVAsQ0FBZUMsSUFBdEI7QUFDbEI7QUFBUyxhQUFPSixLQUFQO0FBRlg7QUFJRCxDIiwiZmlsZSI6IjI0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtGRVRDSF9VU0VSU30gZnJvbSAnc3RvcmUvYWN0aW9ucyc7XG5cbmV4cG9ydCBkZWZhdWx0IChzdGF0ZSA9IFtdLCBhY3Rpb24pID0+IHtcbiAgc3dpdGNoIChhY3Rpb24udHlwZSkge1xuICAgIGNhc2UgRkVUQ0hfVVNFUlM6IHJldHVybiBhY3Rpb24ucGF5bG9hZC5kYXRhO1xuICAgIGRlZmF1bHQ6IHJldHVybiBzdGF0ZTtcbiAgfVxufVxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL3N0b3JlL3JlZHVjZXJzL3VzZXJzUmVkdWNlci5qcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///24\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _actions = __webpack_require__(1);
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _actions.FETCH_ADMINS:
+      return action.payload.data;
+    default:
+      return state;
+  }
+};
 
 /***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nexports.default = function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;\n  var action = arguments[1];\n\n  switch (action.type) {\n    case _actions.FETCH_CURRENT_USER:\n      return action.payload.data || false;\n    default:\n      return state;\n  }\n};\n\nvar _actions = __webpack_require__(1);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3RvcmUvcmVkdWNlcnMvYXV0aFJlZHVjZXIuanM/Mzc4MyJdLCJuYW1lcyI6WyJzdGF0ZSIsImFjdGlvbiIsInR5cGUiLCJwYXlsb2FkIiwiZGF0YSJdLCJtYXBwaW5ncyI6Ijs7Ozs7O2tCQUVlLFlBQWdDO0FBQUEsTUFBdEJBLEtBQXNCLHVFQUFkLElBQWM7QUFBQSxNQUFSQyxNQUFROztBQUM3QyxVQUFRQSxPQUFPQyxJQUFmO0FBQ0U7QUFBeUIsYUFBT0QsT0FBT0UsT0FBUCxDQUFlQyxJQUFmLElBQXVCLEtBQTlCO0FBQ3pCO0FBQVMsYUFBT0osS0FBUDtBQUZYO0FBSUQsQzs7QUFQRCIsImZpbGUiOiIyNS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7RkVUQ0hfQ1VSUkVOVF9VU0VSfSBmcm9tICdzdG9yZS9hY3Rpb25zJztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKHN0YXRlID0gbnVsbCwgYWN0aW9uKSB7XG4gIHN3aXRjaCAoYWN0aW9uLnR5cGUpIHtcbiAgICBjYXNlIEZFVENIX0NVUlJFTlRfVVNFUjogcmV0dXJuIGFjdGlvbi5wYXlsb2FkLmRhdGEgfHwgZmFsc2U7XG4gICAgZGVmYXVsdDogcmV0dXJuIHN0YXRlO1xuICB9XG59XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gLi9zcmMvc3RvcmUvcmVkdWNlcnMvYXV0aFJlZHVjZXIuanMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///25\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _actions = __webpack_require__(1);
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _actions.FETCH_USERS:
+      return action.payload.data;
+    default:
+      return state;
+  }
+};
 
 /***/ }),
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = constructStore;\n\nvar _redux = __webpack_require__(7);\n\nvar _reduxThunk = __webpack_require__(27);\n\nvar _reduxThunk2 = _interopRequireDefault(_reduxThunk);\n\nvar _reducers = __webpack_require__(6);\n\nvar _reducers2 = _interopRequireDefault(_reducers);\n\nvar _axios = __webpack_require__(5);\n\nvar _axios2 = _interopRequireDefault(_axios);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar clientToAPI = _axios2.default.create({\n  baseURL: '/api'\n});\n\nvar newServerAxios = function newServerAxios(req) {\n  return _axios2.default.create({\n    baseURL: 'http://react-ssr-api.herokuapp.com',\n    headers: { cookie: req.get('cookie') || '' }\n  });\n};\n\nfunction constructStore(req) {\n  var initialState = void 0;\n  var customAxios = void 0;\n  if (req) {\n    initialState = {};\n    customAxios = newServerAxios(req);\n  } else {\n    initialState = window.INITIAL_STATE;\n    customAxios = clientToAPI;\n  }\n\n  return (0, _redux.createStore)(_reducers2.default, initialState, (0, _redux.applyMiddleware)(_reduxThunk2.default.withExtraArgument(customAxios)));\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3RvcmUvY29uc3RydWN0U3RvcmUuanM/M2E0NiJdLCJuYW1lcyI6WyJjb25zdHJ1Y3RTdG9yZSIsImNsaWVudFRvQVBJIiwiY3JlYXRlIiwiYmFzZVVSTCIsIm5ld1NlcnZlckF4aW9zIiwiaGVhZGVycyIsImNvb2tpZSIsInJlcSIsImdldCIsImluaXRpYWxTdGF0ZSIsImN1c3RvbUF4aW9zIiwid2luZG93IiwiSU5JVElBTF9TVEFURSIsIndpdGhFeHRyYUFyZ3VtZW50Il0sIm1hcHBpbmdzIjoiOzs7OztrQkFjd0JBLGM7O0FBZHhCOztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7Ozs7O0FBRUEsSUFBTUMsY0FBYyxnQkFBTUMsTUFBTixDQUFhO0FBQy9CQyxXQUFTO0FBRHNCLENBQWIsQ0FBcEI7O0FBSUEsSUFBTUMsaUJBQWlCLFNBQWpCQSxjQUFpQjtBQUFBLFNBQU8sZ0JBQU1GLE1BQU4sQ0FBYTtBQUN6Q0MsYUFBUyxvQ0FEZ0M7QUFFekNFLGFBQVMsRUFBQ0MsUUFBUUMsSUFBSUMsR0FBSixDQUFRLFFBQVIsS0FBcUIsRUFBOUI7QUFGZ0MsR0FBYixDQUFQO0FBQUEsQ0FBdkI7O0FBS2UsU0FBU1IsY0FBVCxDQUF5Qk8sR0FBekIsRUFBOEI7QUFDM0MsTUFBSUUscUJBQUo7QUFDQSxNQUFJQyxvQkFBSjtBQUNBLE1BQUlILEdBQUosRUFBUztBQUNQRSxtQkFBZSxFQUFmO0FBQ0FDLGtCQUFjTixlQUFlRyxHQUFmLENBQWQ7QUFDRCxHQUhELE1BR087QUFDTEUsbUJBQWVFLE9BQU9DLGFBQXRCO0FBQ0FGLGtCQUFjVCxXQUFkO0FBQ0Q7O0FBRUQsU0FBTyw0Q0FFTFEsWUFGSyxFQUdMLDRCQUFnQixxQkFBTUksaUJBQU4sQ0FBd0JILFdBQXhCLENBQWhCLENBSEssQ0FBUDtBQUtEIiwiZmlsZSI6IjI2LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtjcmVhdGVTdG9yZSwgYXBwbHlNaWRkbGV3YXJlfSBmcm9tICdyZWR1eCc7XG5pbXBvcnQgdGh1bmsgZnJvbSAncmVkdXgtdGh1bmsnO1xuaW1wb3J0IHJlZHVjZXJzIGZyb20gJ3N0b3JlL3JlZHVjZXJzJztcbmltcG9ydCBheGlvcyBmcm9tICdheGlvcyc7XG5cbmNvbnN0IGNsaWVudFRvQVBJID0gYXhpb3MuY3JlYXRlKHtcbiAgYmFzZVVSTDogJy9hcGknLFxufSlcblxuY29uc3QgbmV3U2VydmVyQXhpb3MgPSByZXEgPT4gYXhpb3MuY3JlYXRlKHtcbiAgYmFzZVVSTDogJ2h0dHA6Ly9yZWFjdC1zc3ItYXBpLmhlcm9rdWFwcC5jb20nLFxuICBoZWFkZXJzOiB7Y29va2llOiByZXEuZ2V0KCdjb29raWUnKSB8fCAnJ30sXG59KVxuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBjb25zdHJ1Y3RTdG9yZSAocmVxKSB7XG4gIGxldCBpbml0aWFsU3RhdGU7XG4gIGxldCBjdXN0b21BeGlvcztcbiAgaWYgKHJlcSkge1xuICAgIGluaXRpYWxTdGF0ZSA9IHt9O1xuICAgIGN1c3RvbUF4aW9zID0gbmV3U2VydmVyQXhpb3MocmVxKTtcbiAgfSBlbHNlIHtcbiAgICBpbml0aWFsU3RhdGUgPSB3aW5kb3cuSU5JVElBTF9TVEFURTtcbiAgICBjdXN0b21BeGlvcyA9IGNsaWVudFRvQVBJO1xuICB9XG5cbiAgcmV0dXJuIGNyZWF0ZVN0b3JlKFxuICAgIHJlZHVjZXJzLFxuICAgIGluaXRpYWxTdGF0ZSxcbiAgICBhcHBseU1pZGRsZXdhcmUodGh1bmsud2l0aEV4dHJhQXJndW1lbnQoY3VzdG9tQXhpb3MpKVxuICApXG59XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gLi9zcmMvc3RvcmUvY29uc3RydWN0U3RvcmUuanMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///26\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _actions.FETCH_CURRENT_USER:
+      return action.payload.data || false;
+    default:
+      return state;
+  }
+};
+
+var _actions = __webpack_require__(1);
 
 /***/ }),
 /* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = constructStore;
+
+var _redux = __webpack_require__(8);
+
+var _reduxThunk = __webpack_require__(28);
+
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+var _reducers = __webpack_require__(7);
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+var _axios = __webpack_require__(5);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var clientToAPI = _axios2.default.create({
+  baseURL: '/api'
+});
+
+var newServerAxios = function newServerAxios(req) {
+  return _axios2.default.create({
+    baseURL: 'http://react-ssr-api.herokuapp.com',
+    headers: { cookie: req.get('cookie') || '' }
+  });
+};
+
+function constructStore(req) {
+  var initialState = void 0;
+  var customAxios = void 0;
+  if (req) {
+    // configure for server-side store
+    initialState = {};
+    customAxios = newServerAxios(req);
+  } else {
+    // configure for client-side store
+    initialState = window.INITIAL_STATE;
+    customAxios = clientToAPI;
+  }
+
+  return (0, _redux.createStore)(_reducers2.default, initialState, (0, _redux.applyMiddleware)(_reduxThunk2.default.withExtraArgument(customAxios)));
+}
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"redux-thunk\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWR1eC10aHVua1wiPzBjMjgiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMjcuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJyZWR1eC10aHVua1wiKTtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyBleHRlcm5hbCBcInJlZHV4LXRodW5rXCJcbi8vIG1vZHVsZSBpZCA9IDI3XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///27\n");
+module.exports = require("redux-thunk");
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _serializeJavascript = __webpack_require__(6);
+
+var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
+
+var _reactHelmet = __webpack_require__(30);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (store, appString) {
+  var helmet = _reactHelmet.Helmet.renderStatic();
+
+  return '<html>\n      <head>\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width, initial-scale=1.0">\n        <meta http-equiv="X-UA-Compatible" content="ie=edge">\n        ' + helmet.title.toString() + '\n        ' + helmet.meta.toString() + '\n      </head>\n      <body>\n        <div id="root">' + appString + '</div>\n        <script>\n          window.INITIAL_STATE = ' + (0, _serializeJavascript2.default)(store.getState(), { isJSON: true }) + '\n        </script>\n        <script defer src="bundle.js"></script>\n      </body>\n      </html>';
+};
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-helmet");
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=bundle.js.map

@@ -2,7 +2,7 @@ const {resolve} = require('path');
 
 module.exports = {
 
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   // tells webpack where to look when you do `import whatevs from 'nested/in/src'`
   // so it will try to resovle that path against those included in the modules array
   resolve: {
